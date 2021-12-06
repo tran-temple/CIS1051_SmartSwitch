@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+   <head>
+      <title>GPIO Control</title>
+      <link rel="stylesheet" href='../static/myStyle.css'/>
+   </head>
+   <body>
+		<h1>RPi GPIO Control</h1> 
+			
+		<h2> Actuator Status & Control </h2> 
+		<h3> The LED Light Status ==>  {{ ledLight  }} </h3>
+		<br>
+		<br>
+			{% if  ledLight   == 1 %}
+							
+				<a href="/ledLight/off"class="button">TURN OFF</a>
+				<div><img style="width:50%;" src="../static/light.png"/></div>
+				<div style="display:none;">Image source: clipart-library.com</div>
+			{% else %} 
+				<a href="/ledLight/on" class="button">TURN ON</a>  
+			{% endif %}	 		
+		<br>
+		<br>
+		<footer>Author: Cindy Tran</footer>
+		<br>
+   </body>
+</html>
